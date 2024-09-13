@@ -21,10 +21,8 @@ export class GoogleDocsService {
     );
     // const token = JSON.parse(fs.readFileSync('token.json', 'utf-8'));
     oAuth2Client.setCredentials({
-      access_token:
-        'ya29.a0AcM612x0bJ1_Z4061Ager_zwQ9IHOTCMkj3WDzdzyT7dCJNOGNlBjRTq8XzEph23vJKN8sPPQgQDmeyXuqIfRUJY-J3Yr5_O7FbRZX15gRFIAOK6ZfcUj8t7vYhvx4XAViPd7dl3RuNYSuKrH3vbPo4kJb9kJf6fZtAiUYIraCgYKAZgSARASFQHGX2Mi554gLZIQX8ms8Xit5H9Zqg0175',
-      refresh_token:
-        '1//0gjExda-OH9WmCgYIARAAGBASNwF-L9Ir4kFmrJT8IWmYGkspvw1bDyDeP4kgBNS6QMOJQuyZ7uEJ9T_Vg-4FAHOV68P8jSCHBkA',
+      access_token: process.env.DRIVE_ACCESS_TOKEN,
+      refresh_token: process.env.DRIVE_REFRESH_TOKEN,
       scope:
         'https://www.googleapis.com/auth/drive.appdata https://www.googleapis.com/auth/drive.file https://www.googleapis.com/auth/drive',
       token_type: 'Bearer',
